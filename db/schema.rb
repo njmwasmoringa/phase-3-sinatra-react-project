@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_030056) do
+ActiveRecord::Schema.define(version: 2022_03_31_095056) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -60,6 +60,8 @@ ActiveRecord::Schema.define(version: 2022_03_31_030056) do
     t.string "password_hash"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "role"
+    t.string "password_digest"
   end
 
 end
