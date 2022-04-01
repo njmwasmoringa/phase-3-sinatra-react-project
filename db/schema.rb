@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_31_095056) do
+ActiveRecord::Schema.define(version: 2022_03_31_171531) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
@@ -21,23 +21,20 @@ ActiveRecord::Schema.define(version: 2022_03_31_095056) do
   end
 
   create_table "order_products", force: :cascade do |t|
-    t.integer "products_id"
-    t.integer "orders_id"
     t.integer "quantity"
     t.integer "discounted_price"
-    t.index ["orders_id"], name: "index_order_products_on_orders_id"
-    t.index ["products_id"], name: "index_order_products_on_products_id"
+    t.integer "order_id"
+    t.integer "product_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "customers_id"
     t.integer "order_number"
     t.float "total_cost"
     t.string "status", default: "placed"
     t.text "delivery_details", default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.index ["customers_id"], name: "index_orders_on_customers_id"
+    t.integer "customer_id"
   end
 
   create_table "products", force: :cascade do |t|
