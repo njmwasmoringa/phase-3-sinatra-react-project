@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration[6.1]
       t.integer :order_number
       t.float :total_cost
       # the status of the order could be:
-      # placed, pending_payment, checked_out, in_packaging, dispatched, delivered
+      # placed, pending_payment, checked_out, dispatched, delivered
       t.string :status, :default => "placed"
       t.text :delivery_details, :default => ""
       t.timestamp :created_at
