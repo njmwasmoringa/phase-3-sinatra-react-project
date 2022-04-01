@@ -28,7 +28,7 @@
       {method:"PATCH", endpoint:"/order", description:"For updating an order"},
       {method:"PATCH", endpoint:"/order/checkout", description:"For checking out an order"}].map(e=>`
         <li>
-            <div><strong>Endpoint: http://localhost:9292/${e.endpoint}</strong></div>
+            <div><strong>Endpoint: http://localhost:9292${e.endpoint}</strong></div>
             <div>Method: ${e.method}</div>
             <p>${e.description}</p>
         </li>
