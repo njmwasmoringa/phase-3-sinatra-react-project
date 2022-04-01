@@ -3,7 +3,18 @@ class ApplicationController < Sinatra::Base
   
   # Add your routes here
   get "/" do
-    { message: "The AIPoS Api" }.to_json
+    { description: "The AIPoS Api", endpoints:[
+      {method:"POST", endpoint:"/auth", description:"For login"},
+      {method:"GET", endpoint:"/products", description:"Getting all products"},
+      {method:"GET", endpoint:"/product/:id", description:"Single product by id"},
+      {method:"POST", endpoint:"/product", description:"For adding a product"},
+      {method:"PATCH", endpoint:"/product", description:"For updating a product"},
+      {method:"GET", endpoint:"/orders", description:"Getting all orders"},
+      {method:"GET", endpoint:"/order/:id", description:"Single order by id"},
+      {method:"POST", endpoint:"/order", description:"For adding an order"},
+      {method:"PATCH", endpoint:"/order", description:"For updating an order"},
+      {method:"PATCH", endpoint:"/order/checkout", description:"For checking out an order"}
+    ] }.to_json
   end
 
   post "/auth" do

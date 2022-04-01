@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPoS Documentation</title>
+</head>
+<body>
+
+    <h2>AIPoS Documentation</h2>
+    <h4>End Points</h4>
+    <ul>
+        <li>
+            <strong>Endpoint</strong>
+        </li>
+    </ul>
+
+    <script>
+        document.querySelector("ul").innerHTML = [{method:"POST", endpoint:"/auth", description:"For login"},
+      {method:"GET", endpoint:"/products", description:"Getting all products"},
+      {method:"GET", endpoint:"/product/:id", description:"Single product by id"},
+      {method:"POST", endpoint:"/product", description:"For adding a product"},
+      {method:"PATCH", endpoint:"/product", description:"For updating a product"},
+      {method:"GET", endpoint:"/orders", description:"Getting all orders"},
+      {method:"GET", endpoint:"/order/:id", description:"Single order by id"},
+      {method:"POST", endpoint:"/order", description:"For adding an order"},
+      {method:"PATCH", endpoint:"/order", description:"For updating an order"},
+      {method:"PATCH", endpoint:"/order/checkout", description:"For checking out an order"}].map(e=>`
+        <li>
+            <div><strong>Endpoint: http://localhost:9292/${e.endpoint}</strong></div>
+            <div>Method: ${method}</div>
+            <p>${e.description}</p>
+        </li>
+      `)
+    </script>
+    
+</body>
+</html>
+
