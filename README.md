@@ -1,8 +1,8 @@
 # AIPoS backend APIs
 This is the backend APIs for a point of sale application build by react.
-The front is deployed [here]: https://github.com/njmwasmoringa/aipos-with-backend-api 
+The front is deployed [here]:https://github.com/njmwasmoringa/aipos-with-backend-api 
 
-The application has sample a single user - Administrator - and sample products populated by in seeds.rb
+The application has a single user - Administrator - and sample products populated in seeds.rb
 
 ## How it works
 At first you need to populate sample data by running
